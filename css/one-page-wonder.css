@@ -6,13 +6,15 @@
 
 body {
     margin-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    background: #00556f;
+
 }
 
 .header-image {
     display: block;
     width: 100%;
     text-align: center;
-    background: url('http://placehold.it/1900x500') no-repeat center center scroll;
+    background: url('../img/cover.jpg') no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -21,18 +23,21 @@ body {
 
 .headline {
     padding: 120px 0;
+    color: #00556f;
 }
 
 .headline h1 {
     font-size: 130px;
     background: #fff;
     background: rgba(255,255,255,0.9);
+    border-radius: 25px  25px 0 0;
 }
 
 .headline h2 {
     font-size: 77px;
     background: #fff;
     background: rgba(255,255,255,0.9);
+      border-radius: 0 0 25px  25px ;
 }
 
 .featurette-divider {
@@ -53,10 +58,39 @@ body {
 
 .featurette-heading {
     font-size: 50px;
+    color: #0ad;
 }
 
 footer {
     margin: 50px 0;
+}
+
+.text-muted{
+  color: #aaa;
+  font-size: 0.8em;
+}
+
+.circle{
+  border: 5px solid #525252;
+  object-fit: cover;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+}
+
+
+
+.pull-right{
+  margin-left: 1.5em;
+}
+
+.pull-left{
+  margin-right: 1.5em;
+}
+
+.lead{
+  text-align: justify;
+  color: #ccc;
 }
 
 @media(max-width:1200px) {
@@ -82,6 +116,12 @@ footer {
 
     .featurette-heading {
         font-size: 35px;
+    }
+    .circle{
+
+      width: 400px;
+      height: 400px;
+
     }
 }
 
@@ -113,6 +153,13 @@ footer {
     .featurette-heading {
         font-size: 30px;
     }
+
+    .circle{
+
+      width: 350px;
+      height: 350px;
+
+    }
 }
 
 @media(max-width:768px) {
@@ -126,6 +173,13 @@ footer {
 
     .featurette-heading {
         font-size: 25px;
+    }
+
+    .circle{
+
+      width: 300px;
+      height: 300px;
+
     }
 }
 
@@ -155,6 +209,7 @@ footer {
     .headline h2 {
         font-size: 30px;
     }
+
 }
 
 @media(max-width:375px) {
@@ -175,4 +230,6 @@ footer {
         margin-bottom: 10px;
         margin-left: 0;
     }
+
+
 }
