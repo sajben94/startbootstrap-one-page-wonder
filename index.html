@@ -45,10 +45,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#about">About</a>
+                        <a href="#arduino">Arduino</a>
                     </li>
                     <li>
-                        <a href="#services">Services</a>
+                        <a href="#cordova">Cordova</a>
                     </li>
                     <li>
                       <a href="#hard">Hardvér</a>
@@ -76,10 +76,10 @@
     <!-- Page Content -->
     <div class="container">
 
-        <hr class="featurette-divider">
+        <!-- <hr class="featurette-divider"> -->
 
         <!-- First Featurette -->
-        <div class="featurette" id="about">
+        <div class="featurette" id="arduino">
             <img class="circle img-responsive pull-right" src="img/arduino-nano.jpg">
             <h2 class="featurette-heading">Arduino Nano
                 <span class="text-muted">Breadboard-friendly board</span>
@@ -93,10 +93,10 @@
             generovania PWM signálu.</p>
         </div>
 
-        <hr class="featurette-divider">
+        <!-- <hr class="featurette-divider"> -->
 
         <!-- Second Featurette -->
-        <div class="featurette" id="services">
+        <div class="featurette" id="cordova">
             <img class="circle img-responsive pull-left" src="img/cordova_bot.jpg">
             <h2 class="featurette-heading">Apache Cordova
                 <span class="text-muted">Mobile apps with HTML, CSS &#38; JS</span>
@@ -112,7 +112,7 @@
             ktoré urýchľujú a uľahčujú písanie kódu, zároveň je kód krajší a prehľadnejší.</p>
         </div>
 
-        <hr class="featurette-divider">
+        <!-- <hr class="featurette-divider"> -->
 
         <!-- Third Featurette -->
         <div class="featurette" id="hard">
@@ -120,21 +120,76 @@
             <h2 class="featurette-heading">ArduBot
                 <span class="text-muted">Hardvérová časť</span>
             </h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p class="lead">Na zostavenie robotického zariadenia sme použili nasledovné elektronické
+            súčiastky:
+            <ul>
+              <li>  Arduino Nano 3.0 (ATmega 328)</li>
+              <li>  Adaptér Board for Arduino Nano V3.0</li>
+              <li>  HC-06 Bluetooth modul</li>
+              <li>  HG7881 Dual DC Motor Board</li>
+              <li>  Podvozok stavebnice tanku a dva motory</li>
+              <li>  2 x 9V Batéria</li>
+            </ul>
+
+            <p class="lead">L9110S integrovaný obvod je kompatibilný s Arduino a Raspberry Pi. Tento
+              obvod využíva aj HG7881. Je to kompaktný ovládač pre dva motory, ktorý podporuje
+              napätie 2.5 až 12V na 800mA súvislého prúdu. Pretože nemá chladič, skôr sa odporúča
+              pre menšie projekty.</p>
+
+            </p>
+            <p class="lead">
+              Bluetooth modul HC-06 má štyri popísané vývody vyvedené na kolíkové kontakty
+              (Rx, Tx, GND, Vcc). Napájacie napätie modulu môže byt v rozmedzí 3.3 až 5V, úrovne
+              napätia vyššie ako 7V modul zničia.Úroveň vstupného a výstupného signálu je 3.2V, pri spolupráci s mikrokontrolérom
+              napájaným napätím 5V treba úrovne prispôsobiť. LED na module signalizuje stav
+              pripojenia. Ak bliká, nie je nadviazané spojenie a modul je možne cez vývody Tx / Rx
+              programovať. Ak LED svieti, je nadviazané spojenie a všetko zo vstupu sa považuje za
+              prenášané dáta. Prenosová rýchlosť je defaultne nastavená na 9600 bit za sekundu, tú
+              však môžeme zmeniť.</p>
+
+              <p class="lead">
+              Ako základnú časť stavebnice sme použili podvozok s dvoma motormi. Začali sme pridaním Arduina Nano na
+            podvozok, ktorý predstavuje základnú riadiacu jednotku. Ten sme umiestnili do Adaptéra
+            ktorí umožňuje jednoduchšie prepájanie Arduina s externými zariadeniami.Na ovládanie spomenutých motorov sme
+            použili integrovaný obvod HG7881.Pre vývoj softvéru sme použili grafické prostredia Arduino IDE</p>
+
         </div>
 
-        <hr class="featurette-divider">
+        <!-- <hr class="featurette-divider"> -->
 
         <!-- Third Featurette -->
+
         <div class="featurette" id="soft">
             <img class="circle img-responsive pull-left" src="img/app.jpg">
             <h2 class="featurette-heading">ArduBot
                 <span class="text-muted">Softvérová časť</span>
             </h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p class="lead">Aplikáciu na ovládanie robotického zariadenia cez Bluetooth pre Android platformu sme
+            vyvíjali pomocou frameworku Apache Cordova. Tento spôsob programovania umožňuje
+            používanie webových technológií na vývoj aplikácií pre smartfóny. Framework Apache
+            Cordova sa skladá z webovej a natívnej časti. Natívna časť pre Android platformu je
+            neprogramovaná v jazyku Java.
+            <p class="lead">   Na vývoj webovej časti sa používajú HTML, CSS
+            a JavaScript.Keďže vývoj hybridnej mobilnej aplikácie prebieha veľmi podobne ako vývoj
+            webovej aplikácie, je možné použiť akékoľvek vývojové prostredie, ktoré umožňuje
+            25tvorbu webových aplikácii. Medzi populárne editory patria: Sublime, Atom, WebStrom,
+            NetBeans, VisualStudio. Sublime a Atom sú malé, flexibilné a modulárné editory,
+            odporúčajú sa na menšie projekty. WebStrom, NetBeans a Visual Studio sú robustnejšie
+            vývojové prostredia pre väčšie projekty a spoločné majú, že podporujú kompilovanie
+            Cordova aplikácii priamo v samotnom programe. Na vývoj aplikácie sme použili Atom,
+            ktorý je poskytovaný prostredníctvom GitHubu, takže od začiatku má stavanú podporu
+            verzionovacieho systému git. Okrem toho podporuje aj doplňovanie kódu, zvýrazňovanie
+            syntaxe a môžeme ho rozšíriť o ďalšie funkcionality pridávaním balíčkov.</p>
+            </p>
+            <p class="lead">  Keď sa dotkneme tlačidla, spustí sa zadefinovaná metóda a začne s odosielaním inštrukcií
+            cez Bluetooth. Inštrukcie sa posielajú pokiaľ je tlačidlo stlačené, ako náhle prestaneme
+            držať tlačidlo, tak sa spustí metóda, ktorá pošle príkaz na zastavenie. Metóda stop() je
+            univerzálna a spustí sa pre každé tlačidlo, takže ju nemusíme písať šesť krát ale stačí iba
+            raz. Údaje cez Bluetooth sa odosielajú pomocou metódy write().</p>
         </div>
 
-        <hr class="featurette-divider">
+
+        <!-- <hr class="featurette-divider"> <-->  </-->
 
         <!-- Footer -->
         <footer>
@@ -153,6 +208,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
 
     <script src="js/index.js"></script>
 

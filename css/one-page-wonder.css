@@ -6,7 +6,7 @@
 
 body {
     margin-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    background: #00556f;
+    background: #03376F;
 
 }
 
@@ -14,7 +14,7 @@ body {
     display: block;
     width: 100%;
     text-align: center;
-    background: url('../img/cover.jpg') no-repeat center center scroll;
+    background: url('../img/digital.png') no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -46,6 +46,7 @@ body {
 
 .featurette {
     overflow: hidden;
+    padding: 20px;
 }
 
 .featurette-image.pull-left {
@@ -62,7 +63,7 @@ body {
 }
 
 footer {
-    margin: 50px 0;
+    margin: 150px 0;
 }
 
 .text-muted{
@@ -78,7 +79,10 @@ footer {
   border-radius: 50%;
 }
 
-
+.navbar-brand,
+.navbar-nav{
+  font-size:   1.5em;;
+}
 
 .pull-right{
   margin-left: 1.5em;
@@ -88,9 +92,33 @@ footer {
   margin-right: 1.5em;
 }
 
+ul{
+  color: #ccc;
+  list-style: square;
+  font-size: 1.5em;
+}
+
 .lead{
   text-align: justify;
   color: #ccc;
+}
+
+.featurette:nth-child(odd){
+  background: #112025;
+}
+
+
+.featurette:nth-child(even){
+  background: #262959;
+}
+
+.featurette:first-child{
+  border-radius: 20px 20px 0 0;
+  margin-top: 25px;
+}
+
+.featurette:nth-child(4){
+  border-radius:  0 0 20px 20px;
 }
 
 @media(max-width:1200px) {
